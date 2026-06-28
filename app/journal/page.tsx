@@ -1,0 +1,2 @@
+import { articles } from '@/lib/content'; import { ArticleCard } from '@/components/cards'; import { EyebrowLabel, Section } from '@/components/ui';
+export default function Journal(){return <Section><EyebrowLabel>Journal</EyebrowLabel><h1 className="font-serif text-6xl">Editorial notes for a quieter home.</h1><div className="mt-14 grid gap-12 md:grid-cols-2">{articles.map(a=><ArticleCard article={a} key={a.slug}/>)}</div></Section>}

@@ -1,0 +1,2 @@
+import { SITE } from '@/lib/site-config'; import { EyebrowLabel, Section } from '@/components/ui';
+export default function Affiliate(){return <Section><EyebrowLabel>Legal</EyebrowLabel><h1 className="font-serif text-6xl">Affiliate Disclosure</h1><p className="mt-8 text-lg leading-8 text-taupe">{SITE.affiliateDisclosure}</p><p className="mt-6 leading-8 text-taupe">Product purchases are completed on third-party platforms, including TikTok Shop and Amazon. We do not collect payment details on this website. Review current platform terms before launch.</p></Section>}
