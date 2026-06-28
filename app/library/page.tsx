@@ -1,0 +1,2 @@
+import { allBooks } from '@/lib/content'; import { BookCard } from '@/components/cards'; import { EyebrowLabel, Section } from '@/components/ui';
+export default function Library(){return <Section><EyebrowLabel>The Library</EyebrowLabel><h1 className="max-w-3xl font-serif text-6xl">KDP books for edited rooms and gentler routines.</h1><div className="mt-16 grid gap-14 md:grid-cols-3">{allBooks.map(b=><BookCard book={b} key={b.slug}/>)}</div></Section>}

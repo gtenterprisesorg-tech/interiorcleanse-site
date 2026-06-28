@@ -1,0 +1,8 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { color: #1C1A17; background: #F7F4EF; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #F7F4EF; color: #1C1A17; }
+a { text-underline-offset: 4px; }
+::selection { background:#E4DFD6; }
+.dropcap:first-letter { float:left; font-family:var(--font-display); font-size:4.6rem; line-height:.8; padding:.12em .15em 0 0; color:#A9895A; }

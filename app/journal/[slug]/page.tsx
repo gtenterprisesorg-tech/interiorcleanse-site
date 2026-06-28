@@ -1,0 +1,3 @@
+import { articles, getArticle } from '@/lib/content'; import { notFound } from 'next/navigation'; import { EyebrowLabel, Section } from '@/components/ui';
+export function generateStaticParams(){return articles.map(a=>({slug:a.slug}))}
+export default function ArticlePage({params}:{params:{slug:string}}){const a=getArticle(params.slug); if(!a) notFound(); return <Section><article className="mx-auto max-w-3xl"><EyebrowLabel>{a.eyebrow}</EyebrowLabel><h1 className="font-serif text-6xl">{a.title}</h1><p className="mt-4 text-sm uppercase tracking-[.14em] text-taupe">{a.date}</p><img src={a.image} alt={a.imageAlt} className="mt-10 w-full"/>{a.body.map((p,i)=><p key={p} className={`${i===0?'dropcap ':''}mt-8 text-lg leading-9 text-taupe`}>{p}</p>)}</article></Section>}
